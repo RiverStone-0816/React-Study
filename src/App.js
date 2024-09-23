@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./App.css";
 
 export default function App() {
-
   const [todoData, setTodoData1] = useState([
-    { id: 1, title: 'Study', completed: false },
-    { id: 2, title: 'Clean', completed: false },
-  ])
+    { id: 1, title: "Study", completed: false },
+    { id: 2, title: "Clean", completed: false },
+  ]);
 
   const handleClick = (dataId) => {
-    const newTodoData = todoData.filter((x) => x.id !== dataId)
+    const newTodoData = todoData.filter((x) => x.id !== dataId);
     setTodoData1(newTodoData);
-    console.log('newTodoData', newTodoData)
-  }
+    console.log("newTodoData", newTodoData);
+  };
 
   return (
     <div className="todo-container">
@@ -29,5 +28,5 @@ export default function App() {
         <p>No more tasks left!</p>
       )}
     </div>
-  )
+  );
 }
